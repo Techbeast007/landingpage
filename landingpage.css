@@ -1,0 +1,915 @@
+/* Global styles */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif; /* Primary font */
+    box-sizing: border-box;
+    background-color: #243140;
+}
+
+/* Banner Section */
+.banner {
+    display: flex;
+    background-image: linear-gradient(to right, #243140 40%, #e67051);
+    color: white;
+    padding: 20px;
+}
+
+.left-column {
+    flex: 65%;
+    padding: 20px;
+    position: relative; /* Ensure relative positioning for facilitator */
+}
+
+.right-column {
+    flex: 35%;
+    position: relative; /* Ensure relative positioning for image */
+    overflow: hidden; /* Hide overflow to prevent image from overflowing */
+    display: flex; /* Added display flex for vertical alignment */
+    align-items: flex-end; /* Align items to bottom */
+}
+
+.right-column img {
+    width: 100%; /* Ensure image occupies full width of container */
+    height: 100%; /* Ensure image height is 100% of container height */
+    object-fit: cover; /* Cover ensures the image covers the entire container */
+}
+
+.content-wrapper {
+    margin: 0; /* Remove top and bottom margin */
+    padding-left: 20%; /* Adjust left padding for alignment */
+}
+
+.header-banner {
+    margin: 0;
+    font-size: 90px; /* Larger font size */
+    font-weight: 900; /* Use the boldest possible weight */
+    font-family: 'Montserrat', sans-serif; /* Headings font */
+}
+
+.header-banner .white {
+    color: white;
+}
+
+.header-banner .orange {
+    color: #e67051;
+    font-weight: 900; /* Ensure the orange text is also bold */
+}
+
+.bannersubheading {
+    color: white;
+    font-size: 1.9em;
+    margin-top: 10px;
+}
+.bannersubheading3 {
+    color: white;
+    font-size: 1.3em;
+    margin-top: 40px;
+}
+
+
+.enroll-button {
+    background-color: #f0c040;
+    color: black;
+    border: none;
+    padding: 20px 40px; /* Larger button */
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 40px;
+    font-size: 1.6em; /* Larger font size */
+}
+
+.enroll-button:hover {
+    background-color: #f0c040;
+}
+
+.facilitator {
+    position: absolute;
+    text-align: right;
+    bottom: 20px; /* Adjust bottom position as needed */
+    right: 20px; /* Adjust right position as needed */
+}
+
+
+.yellow {
+    color: yellow;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.white {
+    color: white;
+    font-size: 1.2em;
+}
+
+/* Media queries for responsive layout */
+@media (max-width: 1200px) {
+    .banner {
+        flex-direction: column;
+    }
+
+    .left-column {
+        flex: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .right-column {
+        flex: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    .content-wrapper {
+        padding-left: 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        padding: 10px;
+    }
+
+    .content-wrapper {
+        margin: 20px 0;
+    }
+
+    .header-banner  {
+        font-size: 80px;
+    }
+
+    .enroll-button {
+        padding: 15px 30px;
+        font-size: 1.2em;
+    }
+
+    .facilitator {
+        position: relative;
+        text-align: center;
+        margin-top: 30px;
+    }
+    .header-banner {
+        margin: 0;
+        font-size: 50px; /* Larger font size */
+        font-weight: 900; /* Use the boldest possible weight */
+        font-family: 'Montserrat', sans-serif; /* Headings font */
+    }
+    
+    .header-banner .white {
+        color: white;
+        margin-top: 10px;
+    }
+    
+    .header-banner .orange {
+        color: #e67051;
+        font-weight: 900; /* Ensure the orange text is also bold */
+    }
+    
+    .bannersubheading {
+        color: white;
+        font-size: 30px;
+        margin-top: 10px;
+    }
+    .bannersubheading3 {
+        color: white;
+        font-size: 30px;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+    
+}
+
+.image-section {
+    margin-top: -20px;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly with space between them */
+    padding: 20px 10%; /* Padding on the sides */
+    box-sizing: border-box; /* Ensure padding is included in width */
+    background-color: #0281c2;
+}
+
+.image-container {
+    flex: 0 0 22%; /* Each image container takes up 22% of the flex container */
+    margin: 0 10px; /* Adjust spacing between images */
+}
+
+.image-container img {
+    width: 100%; /* Ensure image fills its container */
+    display: block; /* Remove any default spacing or alignment */
+}
+
+@media (max-width: 768px) {
+    .image-section {
+        flex-wrap: wrap; /* Wrap images onto new lines */
+        justify-content: center; /* Center align items */
+        padding: 10px;
+    }
+
+    .image-container {
+        flex: 0 0 45%; /* Adjust image container width for smaller screens */
+        margin: 10px 0; /* Adjust spacing between images */
+    }
+}
+.solution-section {
+    background-color: #243140;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.solution-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.solution-content h2 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+.solution-content .orange {
+    color: #e67051;
+}
+.video-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.video-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Ensure video does not overflow */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+}
+
+.video-wrapper iframe {
+    width: 100%; /* Ensure iframe fills its container */
+    height: 400px; /* Adjust height as needed */
+    border: none; /* Remove default border */
+}
+.info-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    color: white;
+    box-sizing: border-box;
+}
+
+.info-card {
+    width: calc(33.33% - 172px); /* Fixed width for each card */
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left; /* Left align text within the card */
+    box-sizing: border-box;
+    background-color: #223850; /* Darker color */
+}
+
+.info-card:nth-child(n+4) {
+    width: calc(33.33%  - 172px); /* Two cards per row starting from the fourth card */
+}
+
+.info-card h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.orange {
+    color: #e67051; /* Orange color */
+}
+
+@media (max-width: 768px) {
+    .info-card {
+        width:calc(83% - 10px) /* Two cards per row on smaller screens */
+    }
+    .info-card:nth-child(n+4) {
+        width:calc(83% - 10px)/* Two cards per row starting from the fourth card */
+    }
+}
+.who-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #243140;
+    color: white;
+}
+
+.who-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.who-content h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.who-content .orange {
+    color: #e67051;
+}
+
+.who-box {
+    margin:20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    background-color: #30495c;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: left;
+}
+
+.icon-wrapper {
+    margin-right: 20px;
+}
+
+.icon-wrapper img {
+    width: 40px; /* Adjust icon size */
+    height: 40px; /* Adjust icon size */
+}
+
+.box-title {
+    color: white;
+    font-size: 20px;
+    margin: 0;
+}
+.team-section {
+    display: flex;
+    justify-content: center; /* Center align cards horizontally */
+    padding: 20px; /* Adjust padding for spacing */
+    flex-wrap: wrap; /* Allow cards to wrap onto new lines */
+}
+
+.team-card {
+    width: 30%; /* Reduced width for each card */
+    background-color: white;
+    border: 3px solid yellow;
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px rgba(236, 190, 52, 0.5); /* Yellow shadow */
+    margin: 10px; /* Adjust margin for spacing between cards */
+    display: flex;
+    flex-direction: row; /* Ensure two-column layout */
+}
+
+.team-image {
+    flex: 0 0 30%; /* Fixed width for image column */
+    overflow: hidden; /* Hide overflow to contain image within dimensions */
+}
+
+.team-image img {
+    width: 100%; /* Ensure image fills its container */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    border-bottom: 1px solid #ddd; /* Optional: Add a subtle bottom border for separation */
+}
+
+.team-details {
+    flex: 1; /* Allow content to grow */
+    padding: 20px;
+}
+
+.team-details h3 {
+    font-weight: bold;
+    font-size: 20px; /* Larger font size for headings */
+    margin-bottom: 8px; /* Adjust margin */
+    color: #333; /* Darker text color */
+}
+
+.team-details .orange {
+    color: #e67051; /* Orange color for designation */
+    font-size: 16px; /* Smaller font size for designation */
+    font-weight: bold; /* Ensure designation is bold */
+    margin-bottom: 8px; /* Adjust margin */
+}
+
+.team-details p {
+    font-size: 14px; /* Smaller font size for description */
+    color: #666; /* Lighter text color */
+    line-height: 1.5; /* Improved readability with increased line height */
+}
+
+@media (max-width: 768px) {
+    .team-card {
+        width: calc(100% - 20px); /* Full width minus margins for smaller screens */
+        margin: 10px; /* Adjust margin for spacing on smaller screens */
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+    }
+
+    .team-image {
+        flex: none; /* Reset flex settings for image */
+        width: 100%; /* Full width for image on smaller screens */
+        height: auto; /* Ensure image height adjusts proportionally */
+    }
+
+    .team-details {
+        flex: none; /* Reset flex settings for content */
+        width: 100%; /* Full width for content on smaller screens */
+        padding: 20px; /* Add padding to prevent content from sticking to edges */
+    }
+
+    .team-details h3 {
+        font-size: 18px; /* Decrease font size of heading on smaller screens */
+    }
+
+    .team-details .orange {
+        font-size: 14px; /* Decrease font size of designation on smaller screens */
+    }
+
+    .team-details p {
+        font-size: 12px; /* Decrease font size of description on smaller screens */
+        width: 90%;
+    }
+}
+.testimonials-section {
+    display: flex;
+    justify-content: center; /* Center cards horizontally */
+    flex-wrap: wrap; /* Allow cards to wrap onto new lines */
+    padding: 20px;
+}
+
+.testimonial-card {
+    width: 20%; /* Adjusted width for each card */
+    height: auto; /* Auto height for each card */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+    margin-bottom: 20px; /* Adjust margin for spacing between cards */
+    text-align: left; /* Ensure text content is left-aligned */
+    margin: 20px;
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+  
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.testimonial-image {
+    width: 60px; /* Fixed width for image */
+    height: 60px; /* Fixed height for image */
+    border-radius: 50%; /* Rounded image */
+    overflow: hidden;
+}
+
+.testimonial-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+.testimonial-info {
+    margin-left: 15px;
+}
+
+.testimonial-info h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.testimonial-info .designation {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 0;
+}
+
+.testimonial-content {
+    padding: 15px;
+}
+
+.testimonial-content p {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .testimonial-card {
+        width: 100%; /* Full width on smaller screens */
+        margin-bottom: 20px; /* Adjust margin for spacing on smaller screens */
+        text-align: left; /* Ensure text content is left-aligned */
+    }
+}
+.testimonial-heading-section {
+    text-align: center; /* Center align the heading */
+    padding: 40px 0; /* Padding for top and bottom spacing */
+}
+
+.testimonial-heading-section .section-heading {
+    font-size: 50px; /* Adjust the font size */
+    font-weight: bold; /* Bold font weight */
+    color: white; /* Default text color */
+}
+
+.testimonial-heading-section .section-heading .orange {
+    color: #e67051; /* Orange color for 'TESTIMONIALS' */
+}
+.facilitator-section {
+    text-align: center; /* Center align content */
+    padding: 40px 20px; /* Padding for top and bottom */
+}
+
+.section-heading {
+    margin-bottom: 20px; /* Bottom margin for spacing */
+}
+
+.section-heading h2 {
+    font-size: 3em; /* Larger font size for heading */
+    color: white; /* White font color */
+}
+
+.section-heading .orange {
+    color: #e67051; /* Orange color */
+}
+.facilitator-section {
+    text-align: center; /* Center align content */
+    padding: 40px 20px; /* Padding for top and bottom */
+}
+
+.section-heading {
+    margin-bottom: 20px; /* Bottom margin for spacing */
+    font-size: 50px;
+}
+
+.section-heading .meettheclass{
+    font-size: 1.5em; /* Larger font size for heading */
+    color: white; /* White font color */
+}
+
+.section-heading .orange {
+    color: #e67051; /* Orange color */
+}
+
+
+.facilitator-content {
+    display: flex;
+    justify-content: center; /* Center align content */
+    align-items: flex-start; /* Align items at the top */
+    margin-top: 20px; /* Top margin for spacing */
+    max-width: 1200px; /* Limit maximum width */
+    margin: 0 auto; /* Center align with margins */
+}
+
+.facilitator-image {
+    flex: 1; /* Take up full width */
+    max-width: 100%; /* Limit width to 100% */
+    text-align: center; /* Center align image */
+    margin-right: 20px; /* Right margin for spacing */
+}
+
+.facilitator-image img {
+    width: 100%; /* Adjust width of image */
+    max-width: 500px; /* Maximum width of image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.facilitator-details {
+    flex: 1; /* Take up remaining width */
+    max-width: 100%; /* Limit width to 100% */
+    text-align: left; /* Left align text */
+    margin-left: 20px; /* Left margin for spacing */
+}
+
+.facilitator-details p {
+    font-size: 1em; /* Font size for paragraphs */
+    line-height: 1.8; /* Line height for readability */
+    color: white; /* White font color */
+    margin-bottom: 20px; /* Bottom margin for spacing */
+}
+
+.small-images {
+    display: flex;
+    justify-content: space-around; /* Space evenly between small images */
+    margin-top: 20px; /* Top margin for spacing */
+}
+
+.small-images img {
+    width: 100px; /* Adjust width of small images */
+    height: 100px; /* Fixed height for small images */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .facilitator-content {
+        flex-direction: column; /* Stack columns vertically */
+        text-align: center; /* Center align content */
+    }
+
+    .facilitator-image,
+    .facilitator-details {
+        margin: 0; /* Remove margins for vertical stacking */
+        max-width: 100%; /* Ensure content spans full width */
+    }
+
+    .facilitator-image img {
+        width: 100%; /* Adjust image width for smaller screens */
+        max-width: none; /* Remove maximum width */
+        height: auto; /* Maintain aspect ratio */
+    }
+   .oranges {
+        font-size: 1.2em; /* Larger font size for heading */
+        color: white; /* White font color */
+    }
+
+.section-heading .orange {
+    color: #e67051; /* Orange color */
+}
+}
+
+.additional-info-section {
+    
+    padding: 40px 20px; /* Padding for top and bottom */
+
+}
+
+.info-content {
+    max-width: 70%; /* Limit maximum width */
+    margin: 0 auto; /* Center align with margins */
+
+}
+
+.info-content p {
+    font-size: 1.2em; /* Font size for paragraphs */
+    line-height: 1.8; /* Line height for readability */
+    color: #333; /* Darker font color */
+    color: #f5f5f5; /* Light background color */
+}
+
+.info-content .efforts-paragraph {
+    margin-top: 20px; /* Top margin for spacing */
+}
+
+  /* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main section styles */
+.course-curriculum-section {
+    text-align: center; /* Center align the section */
+    padding: 40px 20px; /* Padding for top and bottom */
+}
+
+.section-heading {
+    font-size: 2em; /* Larger font size for the heading */
+    color: white; /* Dark font color */
+}
+
+.orange-text {
+    color: #e67051; /* Orange color for the word "CURRICULUM" */
+}
+
+.tabs-container {
+    max-width: 800px; /* Limit maximum width */
+    margin: 0 auto; /* Center align with margins */
+    text-align: left; /* Left align text within the tabs */
+}
+
+.tab {
+    margin-bottom: 20px; /* Margin between tabs */
+    border-color: #e67051;
+    border-radius: 10px;
+    background-color:#5F6E80;
+}
+
+.tab-input {
+    display: none; /* Hide the checkbox inputs */
+}
+
+.tab-label {
+    display: block;
+    cursor: pointer;
+    background-color:#384B61;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition for color change */
+    position: relative; /* Position for arrow */
+}
+
+.tab-label:hover {
+    background-color: #243140; /* Darker blue on hover */
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    background-color: #032332; /* Blue background color for content */
+    color: white; /* White text color for content */
+    border-radius: 0 0 8px 8px;
+    margin-top: -9px; /* Adjust to overlap tab borders */
+}
+
+.tab-input:checked + .tab-label {
+    background-color: #e67051; /* Orange background color when checked */
+    color: white; /* White text color when checked */
+}
+
+.tab-label::before {
+    content: '\25B2'; /* Unicode for downward triangle */
+    display: inline-block;
+    margin-right: 10px;
+    position: absolute;
+    right: 20px; /* Adjust position to right */
+    top: calc(50% - 5px); /* Center vertically */
+    transition: transform 0.3s ease; /* Transition for arrow rotation */
+}
+
+.tab-input:checked + .tab-label::before {
+    transform: rotate(180deg); /* Rotate arrow when checked */
+}
+
+.tab-input:checked + .tab-label + .tab-content {
+    display: block; /* Show content when tab is checked */
+}
+
+.tab-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.tab-content ul li {
+    padding: 8px 0;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .tab-label {
+        font-size: 1em; /* Smaller font size for smaller screens */
+    }
+}
+/* Reset default browser styles */
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+
+
+h1 {
+  margin: 50px 0 30px;
+  text-align: center;
+}
+
+.faq-container {
+  margin: 0 auto;
+  color: white;
+  max-width: 900px;
+}
+
+.faq {
+  background-color: #324357;
+  border: 1px solid #e67051; /* Orange border */
+  border-radius: 10px;
+  margin: 20px 0;
+  overflow: hidden;
+  padding: 30px;
+  position: relative;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+    .tab-label {
+        font-size: 1em; /* Smaller font size for smaller screens */
+    }
+    .faq-container {
+        margin: 0 auto;
+        color: white;
+        max-width: 90%;
+      }
+}
+
+.faq.active {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq-title {
+  margin: 0 35px 0 0;
+}
+
+.faq-text {
+  display: none;
+  margin: 30px 0 0;
+}
+
+.faq.active .faq-text {
+  display: block;
+}
+
+.faq-toggle {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+
+.faq-toggle .fa-chevron-up {
+  display: none;
+}
+
+.faq.active .fa-chevron-down {
+  display: none;
+}
+
+.faq.active .fa-chevron-up {
+  display: inline;
+}
+
+.faq-toggle i {
+  font-size: 1.5rem;
+  color: #000;
+}
+
+.cta-section {
+    text-align: center;
+    margin: 50px 0;
+    color: white;
+}
+
+.cta-title {
+    font-size: 2rem;
+    ;
+}
+
+.highlight {
+    color: #e67051;
+}
+
+.cta-button {
+    background-color: white; /* White background */
+    color: #e67051; /* Orange text color */
+    border: 2px solid #e67051; /* Orange border */
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 150px;
+    text-align: center;
+    display: inline-block;
+}
+.footer {
+    background-color: #243140; /* Dark background color */
+    color: white; /* White text color */
+    text-align: center; /* Center align text */
+    padding: 20px 0; /* Padding top and bottom */
+    border-top: 2px solid white; /* White border at the top */
+}
+
+.footer-content {
+    max-width: 800px; /* Limit maximum width */
+    margin: 0 auto; /* Center align with margins */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange items in a column */
+    align-items: center; /* Center align items horizontally */
+}
+
+.footer-row {
+    width: 100%; /* Full width for each row */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center align items horizontally */
+    margin-bottom: 10px; /* Margin between rows */
+}
+
+.footer-logo img {
+    width: 100px;
+    margin-right: 10px; /* Add space between logo and text */
+}
+
+.footer-info {
+    text-align: center; /* Center align text */
+}
+
+
