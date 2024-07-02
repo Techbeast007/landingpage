@@ -174,7 +174,6 @@ body {
 @media (min-width: 769px) and (max-width: 1600px) {
     .banner-facilitator .banner-white {
         font-size: 0.8em;
-        line-height: 1;
     }
     .banner-white {
         font-size: 0.8em;
@@ -183,8 +182,7 @@ body {
         font-size: 0.8em;
     }
     .banner-facilitator .banner-white-prof {
-        font-size: 40px;
-        line-height: 1;
+        font-size: 30px;
     }
     
 }
