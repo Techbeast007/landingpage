@@ -5,6 +5,7 @@ body {
     box-sizing: border-box;
     background-color: #243140;
 }
+
 * {
     box-sizing: border-box;
 }
@@ -81,6 +82,10 @@ body {
     font-size: 1.6em; /* Larger font size */
 }
 
+.banner-facilitator .banner-white-prof {
+    font-size: 40px;
+}
+
 .banner-enroll-button:hover {
     background-color: #f0c040;
 }
@@ -90,6 +95,7 @@ body {
     text-align: right;
     bottom: 20px; /* Adjust bottom position as needed */
     right: 20px; /* Adjust right position as needed */
+    line-height: 0.3;
 }
 
 .banner-yellow {
@@ -103,81 +109,16 @@ body {
     font-size: 1.2em;
 }
 
-/* Media queries for responsive layout */
-@media (max-width: 1300px) {
-    .banner-section {
-        flex-direction: column;
-    }
-
-    .banner-left-column {
-        flex: 100%;
-        padding: 20px;
-        text-align: center;
-    }
-
-    .banner-right-column {
-        flex: 100%;
-        display: block;
-        text-align: center;
-    }
-
-    .banner-content-wrapper {
-        padding-left: 0;
-        text-align: center;
-    }
-
-    .banner-facilitator {
-        position: absolute;
-        text-align: right;
-        bottom: 20px; /* Adjust bottom position as needed */
-        right: 20px; /* Adjust right position as needed */
-        font-size: 14px;
-    }
-}
-@media (max-width: 1400px) {
-
-    .banner-facilitator .banner-white{
-        font-size: 15px;
-    }
-    .banner-white{
-        font-size: 0.8em;
-    }
-    .banner-orange{
-        font-size: 0.8em;
-    }
-
-}
-
-@media (max-width: 1200px) {
-    .banner-section {
-        flex-direction: column;
-    }
-
-    .banner-left-column {
-        flex: 100%;
-        padding: 20px;
-        text-align: center;
-    }
-
-    .banner-right-column {
-        flex: 100%;
-        display: block;
-        text-align: center;
-    }
-
-    .banner-content-wrapper {
-        padding-left: 0;
-        text-align: center;
-    }
-}
-
 @media (max-width: 768px) {
     .banner-section {
+        flex-direction: column;
         padding: 10px;
     }
 
     .banner-content-wrapper {
         margin: 20px 0;
+        padding-left: 0;
+        text-align: center;
     }
 
     .banner-header {
@@ -205,47 +146,57 @@ body {
         margin-top: 40px;
         margin-bottom: 30px;
     }
+
+    .banner-right-column {
+        flex: 100%;
+        display: block;
+        text-align: center;
+    }
+    .banner-facilitator .banner-white {
+        font-size: 0.8em;
+        line-height: 1;
+    }
+    
 }
-@media (max-width: 1028px) {
+
+@media (min-width: 769px) and (max-width: 1600px) {
+    .banner-facilitator .banner-white {
+        font-size: 0.8em;
+        line-height: 1;
+    }
+    .banner-white {
+        font-size: 0.8em;
+    }
+    .banner-orange {
+        font-size: 0.8em;
+    }
+    .banner-facilitator .banner-white-prof {
+        font-size: 18px;
+      
+    }
+    
+}
+
+@media (max-width: 1200px) {
     .banner-section {
-        padding: 10px;
+        flex-direction: column;
+    }
+
+    .banner-left-column {
+        flex: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .banner-right-column {
+        flex: 100%;
+        display: block;
+        text-align: center;
     }
 
     .banner-content-wrapper {
-        margin: 20px 0;
-    }
-
-    .banner-header {
-        font-size: 100px;
-    }
-
-    .banner-enroll-button {
-        padding: 15px 30px;
-        font-size: 1.2em;
-    }
-
-    .banner-facilitator {
-        position: relative;
+        padding-left: 0;
         text-align: center;
-        margin-top: 20px;
-    }
-
-     .banner-facilitator {
-        font-size: 30px;
-        margin-top: 10px;
-    }
-
-    .banner-facilitator .banner-white {
-        font-size: 20px;
-        margin-top: 40px;
-        margin-bottom: 30px;
-        line-height: 0.8;
-    }
-    .banner-facilitator .banner-yellow {
-        font-size: 40px;
-        margin-top: 40px;
-        margin-bottom: 30px;
-        line-height: 0.8;
     }
 }
 
@@ -1124,6 +1075,71 @@ h1 {
     border-bottom: 1px solid #ddd;
 }
 
+.image-gallery-section {
+    padding: 10px;
+    background-color: white; /* White background for the section */
+    margin: 0 auto; /* Center align the section */
+    height: auto;
+}
 
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Distribute images evenly */
+    animation: scroll 20s linear infinite;
+}
 
+.gallery-card {
+    margin: 10px; /* Add margin for spacing */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+    overflow: hidden; /* Ensure content fits within borders */
+    width: calc(10% - 20px); /* Initial width for each card */
+    max-width: 200px; /* Ensure images do not become too large */
+    height: auto; /* Maintain aspect ratio */
+}
 
+.gallery-card img {
+    width: 90%; /* Full width for images */
+    height: 40px; /* Fixed height for images */
+}
+.image-gallery-heading {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.image-gallery-heading h4 {
+    font-size: 36px; /* Large font size */
+    font-weight: 900; /* Maximum boldness */
+    color: #000; /* Black color */
+    margin: 0; /* Remove default margin */
+}
+@keyframes scroll{
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-350px * 3));
+    }
+  }
+
+/* Large screens */
+@media (min-width: 1201px) {
+    .gallery-card {
+        width: calc(10% - 20px); /* Adjust width for large screens */
+    }
+}
+
+/* Medium screens (between 769px and 1200px) */
+@media (min-width: 769px) and (max-width: 1200px) {
+    .gallery-card {
+        width: calc(20% - 20px); /* Adjust width for medium screens */
+    }
+}
+
+/* Small screens (below 768px) */
+@media (max-width: 768px) {
+    .gallery-card {
+        width: 40%; /* Full width for images on small screens */
+        margin: 10px auto; /* Center align images vertically */
+    }
+}
