@@ -155,18 +155,18 @@ body {
     .banner-facilitator .banner-white {
         font-size: 0.8em;
         line-height: 1;
-        margin: 4px;
+        margin-left: 40px;
     }
     .banner-white-prof {
-        font-size: 29px;
+        font-size: 20px;
         line-height: 1;
-        margin-left: 2px;
+        margin-left: 35px;
     }
     .banner-yellow {
         color: yellow;
-        font-size: 1.5em;
-        margin-top: 80px;
-        margin-left: 35px;  
+        font-size: 1.1em;
+        margin-top: 71px;
+        margin-left: 47px;
     }
     
 }
@@ -532,6 +532,10 @@ body {
         margin-bottom: 20px;
         text-align: left;
         margin: 20px;
+    }
+    .testimonial-heading-section .section-heading .orange {
+        color: #e67051;
+        font-size: 0.9em;
     }
 }
 
@@ -1172,3 +1176,137 @@ h1 {
         margin: 10px auto; /* Center align images vertically */
     }
 }
+
+.countdown-section {
+    padding: 20px;
+    background-color: #0281c2;
+    text-align: center;
+    margin-top: -20px;
+}
+
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin-top: 20px;
+    flex-wrap: nowrap; /* Ensure it doesn't stack vertically */
+}
+
+.countdown-part {
+    text-align: center;
+    margin: 0 10px;
+}
+
+.countdown-value {
+    font-size: 120px;
+    font-weight: bold;
+    color: white;
+    padding: 0 40px 6px 40px;
+}
+
+.countdown-label {
+    font-size: 16px;
+    color: white;
+}
+
+.countdown-separator {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0 10px;
+    color: white;
+}
+
+/* Large screens */
+@media (min-width: 1201px) {
+    .countdown-value {
+        font-size: 120px;
+        padding: 0 40px 6px 40px;
+    }
+}
+
+/* Medium screens (between 769px and 1200px) */
+@media (min-width: 769px) and (max-width: 1200px) {
+    .countdown-value {
+        font-size: 80px;
+        padding: 0 20px 6px 20px;
+    }
+    .countdown-separator {
+        font-size: 40px;
+    }
+    .countdown-label {
+        font-size: 14px;
+    }
+}
+
+/* Small screens (below 768px) */
+@media (max-width: 768px) {
+
+.countdown-section {
+    margin-top: -14px;
+}
+
+    
+    .countdown-container {
+        flex-wrap: wrap; /* Allow wrapping but still horizontal */
+  
+    }
+    .countdown-part {
+        margin: 10px 5px; /* Adjust margins for smaller screens */
+    }
+    .countdown-value {
+        font-size: 30px;
+        padding: 0px 0px 0px 0px;
+    }
+    .countdown-separator {
+        font-size: 30px;
+        padding: 0px 0px 0px 0px;
+    }
+    .countdown-label {
+        font-size: 12px;
+    }
+}
+
+
+/* Add your yellow and orange color variables */
+:root {
+    --yellow-color: #F4B400; /* Your specific yellow color */
+    --orange-color: #FF9800; /* Your specific orange color */
+}
+
+.event-details {
+    padding: 20px;
+    text-align: left;
+}
+
+.event-date-location {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.event-item {
+    color: var(--yellow-color);
+    font-size: 24px;
+    margin: 0 10px;
+    display: flex;
+    align-items: left;
+}
+
+
+.event-item i {
+    margin-right: 10px;
+    color: var(--orange-color);
+}
+@media (max-width:768px){
+
+.event-item {
+    color: var(--yellow-color);
+    font-size: 16.8px;
+    margin: 0 50px;
+    display: flex;
+    align-items: left;
+}
+}
+
